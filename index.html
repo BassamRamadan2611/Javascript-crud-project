@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index_style.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="container py-3">
+        <div class="form-group">
+            <label>Prouduct Name:</label>
+            <input onkeyup="validateName(this.value)" id="productNameInp" type="text" class="form-control">
+            <small class="text-muted">Must be 8-20 characters long</small>
+        </div>
+        <div class="form-group">
+            <label>Prouduct Price:</label>
+            <input onkeyup="validatePrice(this.value)"  id="productPriceInp" type="text" class="form-control">
+            <small class="text-muted">Must be 8-20 characters long</small>
+        </div>
+        <div class="form-group">
+            <label>Prouduct Category:</label>
+            <input   id="productCategoryInp" type="text" class="form-control">
+            <small class="text-muted">Must be 8-20 characters long</small>
+        </div>
+       
+        <div class="form-group">
+            <label id="desc"> Prouduct Desc:</label>
+            <textarea   id="productDescInp" type="text" class="form-control"></textarea>
+            <small class="text-muted">Must be 8-20 characters long</small>
+        </div>
+        <button  id="addBtn" onclick="addProuduct()" class="btn btn-primary toggle">Add Product</button>
+        <button  id="edit" onclick="editProduct()" class="btn btn-success toggle">Edit Product</button>
+        
+      
+    <div class="clearfix"></div>
+    </div>
+ <div class="container-fluid">
+    <h2 class="text-center">our products</h2>
+    <input onkeyup="searchProducts(this.value)" type="search" placeholder="Search" class="form-control w-50 m-auto">
+     <div class="row " id="rowBody">
+       
+     </div>
+ </div>
+ 
+    
+
+    <script src="js/first.js"></script>
+</body>
+
+</html>
